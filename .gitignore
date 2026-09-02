@@ -1,0 +1,116 @@
+# ==============================================================================
+# Python & Core Workspace Artifacts
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==============================================================================
+# Virtual Environments (Local Packages & Interpreters)
+# ==============================================================================
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ==============================================================================
+# Jupyter Notebooks & Dev Scratchpads
+# ==============================================================================
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+%notebookprofile%
+*.ipynb_checkpoints
+
+# ==============================================================================
+# Security, Private Environment Variables, & Secrets
+# ==============================================================================
+.env
+.env.*
+.secrets
+secrets.yaml
+*.pem
+*.key
+*.cert
+
+# ==============================================================================
+# Machine Learning Data, Weights, & Model Checkpoints (Crucial for MLOps)
+# ==============================================================================
+# Block raw data formats
+*.csv
+*.parquet
+*.jsonl
+*.h5
+*.hdf5
+
+# Block deep learning weights and model states
+*.pt
+*.pth
+*.bin
+*.onnx
+*.pkl
+*.pickle
+*.ckpt
+*.safetensors
+
+# ==============================================================================
+# MLOps, Tracking, Orchestration, & System Tools
+# ==============================================================================
+# MLflow local tracking history
+mlruns/
+mlartifacts/
+
+# Weights & Biases local cache
+wandb/
+
+# Data Version Control local cache (DVC indexes the files, data stays out of Git)
+.dvc/cache/
+.dvc/tmp/
+
+# Apache Airflow runtime logs & database
+airflow/logs/
+airflow/airflow.db
+
+# Prefect internal storage & run artifacts
+.prefect/
+
+# Feast local feature store registry database
+data/registry.db
+data/online_store.db
+
+# Evidently AI workspace cache
+.evidently/
+
+# ==============================================================================
+# Testing, Coverage, & OS Overheads
+# ==============================================================================
+.pytest_cache/
+.coverage
+htmlcov/
+.pytest_cache
+.ruff_cache/
+.mypy_cache/
+
+# OS metadata
+.DS_Store
+Thumbs.db
