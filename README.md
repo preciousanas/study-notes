@@ -1,51 +1,72 @@
 # 🚀 PhD to Job-Ready: ML & MLOps Engineer Roadmap
 
-Welcome to my central learning hub and engineering portfolio. This repository documents my 6–12 month, project-driven transition from academic research to a production-focused Machine Learning / MLOps / LLMOps Engineer. 
-
-Instead of focusing purely on theoretical derivations, this roadmap tracks my hands-on mastery of scalable model deployment, infrastructure reliability, automation pipelines, and production systems.
+Welcome to my central learning hub and engineering portfolio. This repository documents my 6–12 month, project-driven transition from academic research to a production-focused Machine Learning / MLOps / LLMOps Engineer.
 
 ---
 
 ## 🗺️ High-Level Learning Roadmap
 
-This portfolio is divided into 5 core execution modules. Each module contains deep theoretical notes, structured codebases, and production-grade portfolio projects.
+This portfolio covers 9 distinct execution modules culminating in an end-to-end production pipeline capstone. Modeling theory is treated leanly; systems, software engineering practices, performance tuning, and operational metrics dictate the pacing.
 
 ```mermaid
 graph TD
-    M1[1. Math & Stats Literacy] --> M2[2. Classical ML Foundations]
+    M1[1. Math & Stats] --> M2[2. Classical ML]
     M2 --> M3[3. Deep Learning Core]
-    M3 --> M4[4. Generative AI & LLMs]
-    M4 --> M5[5. Production MLOps Engineering]
+    M3 --> M4[4. GenAI & LLMs]
+    M4 --> M5[5. Production MLOps]
+    M5 --> M6[6. Data & Infra]
+    M6 --> M7[7. SWE & HPC]
+    M7 --> M8[8. Ethics & Comms]
+    M8 --> M9[9. Capstone Project]
     
-    style M5 fill:#f96,stroke:#333,stroke-width:4px
+    style M5 fill:#f96,stroke:#333,stroke-width:2px
+    style M6 fill:#f96,stroke:#333,stroke-width:2px
+    style M7 fill:#f96,stroke:#333,stroke-width:2px
+    style M9 fill:#bbf,stroke:#333,stroke-width:3px
 ```
 
 ---
 
-## 🗂️ Repository Directory Structure
+## 📅 Suggested Week-by-Week Timeline (6-Month Track)
 
-The workspace is organized into modular directories to keep study materials separate from deployed software engineering artifacts:
+| Weeks | Focus Module | Core Milestone Target |
+| :--- | :--- | :--- |
+| **1–2** | Module 1 (Lean) + Module 2 | Build Optimizer Zoo & Tabular Scikit-Learn Pipeline |
+| **3–4** | Module 3 (Applied Fluency Only) | Complete Native PyTorch Transformer Fine-Tuning Loop |
+| **5–7** | Module 4 (GenAI & LLMs) | Construct QLoRA Fine-Tuned + RAG Evaluation Harness |
+| **8–12**| Module 5 (AI Engineering) — **Core Focus**| Deploy vLLM + FastAPI Gateways on Local Kubernetes |
+| **13–15**| Module 6 (Data & Infra) | Set Up Orchestrated ETL Ingestion using DVC & Feast |
+| **16–17**| Module 7 (SWE / HPC) | Harden Performance with pytest Codebases & JAX/Numba |
+| **18–23**| Module 9 (**Capstone Execution**) | Ship the Productionized Research Intelligence Platform |
+| **24** | Portfolio Polish & Interview Prep | Draft System Architecture Case-Studies & Resume Syncs |
+
+> 💡 *For a 12-month track, double each time block and integrate a second, infra-focused side project (e.g., a Kubernetes-native multi-model serving system or a full Ray-based distributed training job) to expand the MLOps engineering scope.*
+
+---
+
+## 🗂️ General GitHub Portfolio Conventions
+
+Every distinct project codebase nested within this ecosystem adheres strictly to the layout schema outlined below:
 
 ```text
-.
-├── .github/
-│   └── ISSUE_TEMPLATE/        # Automated task templates for tracking milestones
-├── 01-math-stats/              # Module 1: Linear algebra, calculus, & gradient descent
-│   ├── notes.md                # Multi-variable chain rule & step-size mechanics
-│   └── optimizer-zoo/          # NumPy code: Custom SGD, Momentum, RMSProp, & Adam
-├── 02-classical-ml/            # Module 2: Feature engineering & deployment flywheels
-│   ├── notes.md                # Data leakage prevention & operational tradeoffs
-│   └── tabular-pipeline/       # Scikit-learn, Optuna, & automated Model Cards
-├── 03-deep-learning/           # Module 3: Native PyTorch & Transformer internals
-│   ├── notes.md                # Computational graphs & attention head dimensions
-│   └── transformer-finetune/   # Raw PyTorch fine-tuning loop (No HF Trainer)
-├── 04-genai-llms/              # Module 4: Applied GenAI & LLMOps
-│   ├── notes.md                # RAG strategies, prompt hygiene, & Quantization
-│   └── rag-eval-harness/       # Llama3/Mistral + QLoRA + Vector DB + Eval Harness
-└── 05-production-mlops/        # Module 5: Infrastructure, Scale, & Reliability
-    ├── notes.md                # Containers, API latency, & CI/CD architectures
-    └── deployment-pipeline/    # Deployed FastAPI + Docker + K8s + MLflow + GitHub Actions
+project-name/
+├── README.md               # Context, setup commands, numerical evaluations, and bottlenecks
+├── src/                    # Reusable source code organized clean and modular by function
+├── notebooks/              # Sandboxed scratchpads for raw exploratory research work only
+├── tests/                  # Complete pytest testing suites guarding functional logic
+├── configs/                # Isolated YAML/JSON application runtime parameter configurations
+├── k8s/                    # Native Kubernetes infrastructure manifest configurations
+├── docker/                 # High-efficiency Dockerfiles and multi-container Compose setups
+├── .github/workflows/      # Automated CI pipelines: format checking, linting, & test runners
+└── docs/                   # Visual architecture wireframes, system retrospectives, & charts
 ```
+
+### 🎯 Strict Codebase README Requirements
+Every nested module profile must answer the following questions directly, in chronological order:
+1. **What problem does this solution solve?**
+2. **How do I execute or interact with this platform in under 5 commands?**
+3. **What were the concrete system performance results? (Must provide a numerical metric)**
+4. **What exact design parameters would I optimize or improve next?**
 
 ---
 
@@ -53,21 +74,19 @@ The workspace is organized into modular directories to keep study materials sepa
 
 | Module | Core Project Target | Primary Stack | Priority | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| **01** | **Optimizer Zoo:** NumPy loss surface optimizations from scratch | NumPy, Matplotlib | 🟡 Nice-to-Have | ⏳ Planned |
-| **02** | **End-to-End Tabular ML Pipeline:** Operational optimization tuning | Scikit-learn, Optuna | 🔴 Must-Have | ⏳ Planned |
-| **03** | **Fine-Tune, Don't Derive:** Attention mapping & native training loops | PyTorch, Weights & Biases | 🔴 Must-Have | ⏳ Planned |
-| **04** | **RAG Assistant + Eval Harness:** QLoRA finetunes validated on metrics | LlamaIndex/Weaviate, PEFT | 🔴 Must-Have | ⏳ Planned |
-| **05** | **Production Pipeline:** High-throughput, fully monitored serving API | FastAPI, Docker, K8s, GHA | 🔴 Must-Have | ⏳ Planned |
+| **01** | **Optimizer Zoo** | NumPy, Matplotlib | 🟡 Nice-to-Have | ⏳ Planned |
+| **02** | **End-to-End Tabular ML Pipeline** | Scikit-learn, Optuna | 🔴 Must-Have | ⏳ Planned |
+| **03** | **Fine-Tune, Don't Derive** | PyTorch, W&B | 🔴 Must-Have | ⏳ Planned |
+| **04** | **RAG Assistant + Eval Harness** | LlamaIndex, PEFT | 🔴 Must-Have | ⏳ Planned |
+| **05** | **Serve, Scale, Monitor LLM** | vLLM, FastAPI, K8s, Evidently| 🔴 Must-Have | ⏳ Planned |
+| **06** | **Versioned, Orchestrated Ingestion** | Prefect/Airflow, DVC, Feast | 🔴 Must-Have | ⏳ Planned |
+| **07** | **Speed Up and Harden a Training Loop** | JAX/Numba, pytest, Streamlit| 🔴 Must-Have | ⏳ Planned |
+| **08** | **Folded Ethics & Interpretability** | SHAP, Captum, Fairness 360 | 🔴 Must-Have | 🔄 Ongoing |
+| **09** | **Research Intelligence Platform** | **Full MLOps Stack Unified** | 🔴🔴 Capstone | ⏳ Planned |
 
 ---
 
-## 🛠️ Automated Workspace Setup & Workflow Guide
-
-To interact with this repository and stay on track, I leverage GitHub's native project management ecosystem:
-
+## 🛠️ Workspace Setup & Workflow Guide
 1. **Task Boards:** View my active workflow pipeline on my [GitHub Projects Board](../../projects).
-2. **Issue Generation:** When starting a new module, I go to the **Issues** tab, click **New Issue**, and select the corresponding Module template to instantly generate my learning goals and "Ship It" checklists.
-3. **Commit Linking:** I include keywords in my commit messages (e.g., `git commit -m "feat: implement Adam logic closes #1"`) to automatically track task completion and transition project cards across columns.
-
----
-*Follow along with my contribution graph as I turn raw data science theory into production-grade AI platforms.*
+2. **Issue Generation:** When starting a new module, go to the **Issues** tab, click **New Issue**, and select the corresponding template.
+3. **Commit Linking:** Include keywords in commit messages (e.g., `git commit -m "feat: complete numba optimization closes #7"`) to automatically track task completion.
