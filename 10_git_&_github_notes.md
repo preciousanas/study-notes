@@ -1,5 +1,5 @@
 ## Git & GitHub 
-1. Core Concepts & Architecture
+### 1. Core Concepts & Architecture
 #### What is Git?
 Git is a distributed version control system (DVCS) that tracks changes in source code during software development. Unlike centralized systems, every developer's machine holds a full copy of the project repository and its historical commits.
 
@@ -11,7 +11,15 @@ Git tracks files across four primary states/areas:
 ``` text
 [ Working Directory ] --( git add )--> [ Staging Area (Index) ] --( git commit )--> [ Local Repository ] --( git push )--> [ Remote Repository (GitHub) ]
 ```
-Working Directory: The local file tree on your file system where you edit code.Staging Area (Index): A draft zone where file modifications are gathered before being recorded to history.Local Repository (.git directory): The local snapshot database containing all committed changes and history.Remote Repository: The hosted version of your repository on GitHub.2. Initial Setup & ConfigurationConfigure your identity globally on your machine before creating commits.Bash# Set global username
+###### 1. Working Directory: The local file tree on your file system where you edit code.
+###### 2. Staging Area (Index): A draft zone where file modifications are gathered before being recorded to history.
+###### 3. Local Repository (.git directory): The local snapshot database containing all committed changes and history.
+###### 4. Remote Repository: The hosted version of your repository on GitHub.
+
+### 2. Initial Setup & Configuration
+Configure your identity globally on your machine before creating commits.
+Bash
+# Set global username
 git config --global user.name "Your Name"
 
 # Set global email (should match your GitHub email)
@@ -22,7 +30,9 @@ git config --global init.defaultBranch main
 
 # Verify current configuration
 git config --list
-3. Basic Local Git WorkflowInitializing and Tracking FilesBash# Initialize a new Git repository in the current folder
+
+
+### 3. Basic Local Git WorkflowInitializing and Tracking FilesBash# Initialize a new Git repository in the current folder
 git init
 
 # Check the current status of files (untracked, modified, staged)
