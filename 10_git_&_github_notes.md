@@ -44,8 +44,21 @@ git status
 ###### Stage a specific file
 git add index.html
 
-###### Stage all changes (new, modified, deleted) in the directory
+###### Stage all .html file in the current directory excluding deleted ones
+git add *.html
+
+###### Stage only new or modified files, excluding deleted ones.
+git add *
+
+###### Stage all changes (new, modified, deleted) across the entire project.
+git add --all
+git add -A
+
+###### Stage all changes (new, modified, deleted) in the current directory and everythin inside it.
 git add .
+
+###### Remove everything from the staging area and return them to the working directory
+git reset
 
 ###### Commit staged changes with a concise message
 git commit -m "feat: initial project setup and add index.html"
