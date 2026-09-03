@@ -155,21 +155,29 @@ git clone https://github.com/username/repository-name.git
 |Hard Reset | git reset --hard HEAD~1 | Destructive: Completely deletes commit and changes. |
 | Safety Net (Revert) | git revert <commit-hash> | Creates a new commit that reverses changes from a prior commit. Safe for public remotes. |
 
-### 8. Best Practices & The ```text .gitignore ``` File
-**.gitignore** Pattern RulesCreate a file named .gitignore at the root of your project to tell Git which files/directories to ignore (e.g., build artifacts, sensitive keys, environment variables).Code snippet# Dependencies
+### 8. Best Practices & The .gitignore File
+**.gitignore** Pattern Rules
+Create a file named **.gitignore** at the root of your project to tell Git which files/directories to ignore (e.g., build artifacts, sensitive keys, environment variables).
+
+Code snippet
+###### Dependencies
 node_modules/
 vendor/
 
-# Environment Variables & Secrets
+###### Environment Variables & Secrets
 .env
 .env.local
 
-# OS Generated Files
+###### OS Generated Files
 .DS_Store
 Thumbs.db
 
-# Build Artifacts
+###### Build Artifacts
 dist/
 build/
 *.log
-Git Commit GuidelinesCommit Often: Make small, logical commits rather than large, monolithic ones.Write Clear Commit Messages: Use imperative tense in the title line (e.g., "Add user login endpoints" instead of "Added user login endpoints").Never Commit Secrets: Keep API keys, private passwords, and credentials out of Git history. If committed accidentally, purge using history-rewriting tools (e.g., git-filter-repo) and rotate credentials immediately.
+
+### Git Commit Guidelines
+Commit Often: Make small, logical commits rather than large, monolithic ones.
+Write Clear Commit Messages: Use imperative tense in the title line (e.g., "Add user login endpoints" instead of "Added user login endpoints").
+Never Commit Secrets: Keep API keys, private passwords, and credentials out of Git history. If committed accidentally, purge using history-rewriting tools (e.g., git-filter-repo) and rotate credentials immediately.
