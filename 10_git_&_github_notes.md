@@ -95,14 +95,14 @@ A merge conflict occurs when Git cannot automatically reconcile differences betw
 
 1. Run 'git status' to identify conflicted files.
 2. Open the files and inspect conflict markers:
-
+```text
 Code snippet
 <<<<<<< HEAD
 Current branch changes
 =======
 Incoming branch changes
 >>>>>>> feature-branch
-
+```
 3. Edit the file to preserve the correct code and remove conflict markers.
 4. Stage the resolved file: git add <filename>
 5. Finalize the merge commit: git commit -m "fix: resolve merge conflict"
