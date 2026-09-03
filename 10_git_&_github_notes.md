@@ -9,7 +9,6 @@ GitHub is a cloud-based hosting platform for Git repositories. It provides conti
 #### Git Architecture & Area Workflow
 Git tracks files across four primary states/areas:
 ``` text
-flowchart LR
 [ Working Directory ] --( git add )--> [ Staging Area (Index) ] --( git commit )--> [ Local Repository ] --( git push )--> [ Remote Repository (GitHub) ]
 ```
 Working Directory: The local file tree on your file system where you edit code.Staging Area (Index): A draft zone where file modifications are gathered before being recorded to history.Local Repository (.git directory): The local snapshot database containing all committed changes and history.Remote Repository: The hosted version of your repository on GitHub.2. Initial Setup & ConfigurationConfigure your identity globally on your machine before creating commits.Bash# Set global username
