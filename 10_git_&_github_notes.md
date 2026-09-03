@@ -1,5 +1,14 @@
 ## Git & GitHub 
-1. Core Concepts & ArchitectureWhat is Git?Git is a distributed version control system (DVCS) that tracks changes in source code during software development. Unlike centralized systems, every developer's machine holds a full copy of the project repository and its historical commits.What is GitHub?GitHub is a cloud-based hosting platform for Git repositories. It provides continuous integration/continuous deployment (CI/CD), issue tracking, code reviews (Pull Requests), and team collaboration features.Git Architecture & Area WorkflowGit tracks files across four primary states/areas:[ Working Directory ] ──( git add )──> [ Staging Area (Index) ] ──( git commit )──> [ Local Repository ] ──( git push )──> [ Remote Repository (GitHub) ]
+1. Core Concepts & Architecture
+#### What is Git?
+Git is a distributed version control system (DVCS) that tracks changes in source code during software development. Unlike centralized systems, every developer's machine holds a full copy of the project repository and its historical commits.
+
+#### What is GitHub? 
+GitHub is a cloud-based hosting platform for Git repositories. It provides continuous integration/continuous deployment (CI/CD), issue tracking, code reviews (Pull Requests), and team collaboration features.
+
+#### Git Architecture & Area Workflow
+Git tracks files across four primary states/areas:
+[ Working Directory ] ──( git add )──> [ Staging Area (Index) ] ──( git commit )──> [ Local Repository ] ──( git push )──> [ Remote Repository (GitHub) ]
 Working Directory: The local file tree on your file system where you edit code.Staging Area (Index): A draft zone where file modifications are gathered before being recorded to history.Local Repository (.git directory): The local snapshot database containing all committed changes and history.Remote Repository: The hosted version of your repository on GitHub.2. Initial Setup & ConfigurationConfigure your identity globally on your machine before creating commits.Bash# Set global username
 git config --global user.name "Your Name"
 
