@@ -1,0 +1,45 @@
+name: Continuous Integration Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-codebase:
+    name: Codebase Lint & Test Runner
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out the latest commit onto the GitHub runner virtual machine
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      # 2. Spin up an isolated, consistent Python environment
+      - name: Setup Python Runtime Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip' # Automatically caches packages to speed up consecutive runs
+
+      # 3. Dynamically discover and install project dependencies
+      - name: Install System and Testing Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff pytest numpy
+          # Dynamically install any module-specific requirement files if they exist
+          find . -name "requirements.txt" -exec pip install -r {} \;
+
+      # 4. Enforce strict software engineering formatting rules
+      - name: Code Quality Audit (Ruff Lint & Format)
+        run: |
+          # Check for structural syntax bugs and style violations
+          ruff check .
+          # Ensure code layout matches strict formatting rules
+          ruff format --check .
+
+      # 5. Automatically find and execute every 'test_*.py' script across all 9 modules
+      - name: Execute Automated Test Suites (pytest)
+        run: |
+          pytest --tb=short -v
