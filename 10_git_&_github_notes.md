@@ -178,6 +178,6 @@ build/
 *.log
 
 ### Git Commit Guidelines
-Commit Often: Make small, logical commits rather than large, monolithic ones.
-Write Clear Commit Messages: Use imperative tense in the title line (e.g., "Add user login endpoints" instead of "Added user login endpoints").
-Never Commit Secrets: Keep API keys, private passwords, and credentials out of Git history. If committed accidentally, purge using history-rewriting tools (e.g., git-filter-repo) and rotate credentials immediately.
+1. Commit Often: Make small, logical commits rather than large, monolithic ones.
+2. Write Clear Commit Messages: Use imperative tense in the title line (e.g., "Add user login endpoints" instead of "Added user login endpoints").
+3. Never Commit Secrets: Keep API keys, private passwords, and credentials out of Git history. If committed accidentally, purge using history-rewriting tools (e.g., git-filter-repo) and rotate credentials immediately.
