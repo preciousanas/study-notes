@@ -8,7 +8,7 @@ GitHub is a cloud-based hosting platform for Git repositories. It provides conti
 
 #### Git Architecture & Area Workflow
 Git tracks files across four primary states/areas:
-``` mermaid
+``` text
 flowchart LR
 [ Working Directory ] --( git add )--> [ Staging Area (Index) ] --( git commit )--> [ Local Repository ] --( git push )--> [ Remote Repository (GitHub) ]
 ```
