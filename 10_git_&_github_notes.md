@@ -144,9 +144,19 @@ git clone https://github.com/username/repository-name.git
 5. Merge: Merging the approved PR into the base branch and deleting the topic branch.
 
 ### 7. Essential Git Inspection & Undo Tools
-| -- Action -- | -- Command -- | Scope / Notes -- |
+|  Action  |  Command  | Scope / Notes |
+| :--- | :--- | :--- |
 | Inspect Line Differences | git diff | Shows unstaged changes relative to the index. |
-| Inspect Staged Differencesgit diff --stagedShows staged changes relative to HEAD.Unstage a Filegit restore --staged <file>Moves file out of staging area; preserves workspace modifications.Discard Local Changesgit restore <file>Overwrites local modifications back to last commit state.Soft Resetgit reset --soft HEAD~1Undoes the last commit; preserves changes in Staging.Mixed Resetgit reset --mixed HEAD~1Undoes commit and un-stages changes; leaves code in Working Directory.Hard Resetgit reset --hard HEAD~1Destructive: Completely deletes commit and changes.Safety Net (Revert)git revert <commit-hash>Creates a new commit that reverses changes from a prior commit. Safe for public remotes.8. Best Practices & The .gitignore File.gitignore Pattern RulesCreate a file named .gitignore at the root of your project to tell Git which files/directories to ignore (e.g., build artifacts, sensitive keys, environment variables).Code snippet# Dependencies
+| Inspect Staged Differences | git diff --staged | Shows staged changes relative to HEAD. |
+| Unstage a File | git restore --staged <file> | Moves file out of staging area; preserves workspace modifications. |
+| Discard Local Changes | git restore <file> | Overwrites local modifications back to last commit state. |
+| Soft Reset | git reset --soft HEAD~1 | Undoes the last commit; preserves changes in Staging. |
+| Mixed Reset | git reset --mixed HEAD~1 | Undoes commit and un-stages changes; leaves code in Working Directory. |
+|Hard Reset | git reset --hard HEAD~1 | Destructive: Completely deletes commit and changes. |
+| Safety Net (Revert) | git revert <commit-hash> | Creates a new commit that reverses changes from a prior commit. Safe for public remotes. |
+
+### 8. Best Practices & The ```text .gitignore ``` File
+**.gitignore** Pattern RulesCreate a file named .gitignore at the root of your project to tell Git which files/directories to ignore (e.g., build artifacts, sensitive keys, environment variables).Code snippet# Dependencies
 node_modules/
 vendor/
 
