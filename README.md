@@ -40,7 +40,6 @@ graph TD
 | **18–23**| Module 9 (**Capstone Execution**) | Ship the Productionized Research Intelligence Platform |
 | **24** | Portfolio Polish & Interview Prep | Draft System Architecture Case-Studies & Resume Syncs |
 
-> 💡 *For a 12-month track, double each time block and integrate a second, infra-focused side project (e.g., a Kubernetes-native multi-model serving system or a full Ray-based distributed training job) to expand the MLOps engineering scope.*
 
 ---
 

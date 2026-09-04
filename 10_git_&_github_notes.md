@@ -51,8 +51,7 @@ git add *.html
 git add *
 
 ###### Stage all changes (new, modified, deleted) across the entire project.
-git add --all
-git add -A
+git add --all | git add -A
 
 ###### Stage all changes (new, modified, deleted) in the current directory and everythin inside it.
 git add .
@@ -62,6 +61,27 @@ git reset
 
 ###### Commit staged changes with a concise message
 git commit -m "feat: initial project setup and add index.html"
+
+###### undo the last Commit and bring everything back to the working directory
+git reset HEAD~
+
+###### brings back the stage changes not acutal deleted files.
+git reset
+
+######  brings back both the stage changes and the acutal deleted files.
+git reset --hard
+
+###### remove four.txt and automatically move that change to the staging area
+git rm four.txt
+
+###### remove file only from the staging area both keep it physically in the working directory
+git rm --cached four.txt
+
+###### completely removes file
+git rm --force four.txt | git rm -f four.txt
+
+###### completely removes FOLDER and everything inside
+git rm -f <FOLDER>
 
 ###### View commit history
 git log
