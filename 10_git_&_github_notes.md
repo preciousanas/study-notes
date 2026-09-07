@@ -164,7 +164,7 @@ git fetch origin
 ##### Download and automatically merge remote changes into current branch
 git pull origin main
 
-##### help revert any file or directory back to its previous state of last commit. 
+###### help revert any file or directory back to its previous state of last commit. 
 ###### use to undo local uncommited changes, or removes changes that were added to the staging area using git add
 git restore filename.extension | git restore directory_name
 
@@ -178,6 +178,27 @@ git restore --staged filename | git restore --staged .
 Bash
 ##### Clone a repository onto your local machine
 git clone https://github.com/username/repository-name.git
+
+###### temporarily set aside your unfinished workd in one branch, swithed to another branch to do something
+git stash 
+
+###### restore the stash changes back to your working directory, and remove the changes from stash list
+git stash pop
+
+###### restore the newsest stash changes back to your working directory, but keep the changes in the stash list.
+git stash apply
+
+##### Git can store a list of multiple stashes. And we can view all those stash list. To see the list run:
+git stash list
+
+###### remove a specific stash from a stash list
+git stash drop
+
+###### used to undo the changes made in a previous commit, but instead of deleting that old commit, it creates a new one that reverses those changes
+git revert 'commit_id'
+
+###### bringing updates from main branch into a another branch without merging, to got a clean commit history.
+git rebase main
 
 ### 6. GitHub Collaboration Workflow
 1. Forking: Copying another user's remote repository to your personal GitHub account.
