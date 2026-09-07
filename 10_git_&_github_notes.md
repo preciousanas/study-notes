@@ -164,6 +164,16 @@ git fetch origin
 ##### Download and automatically merge remote changes into current branch
 git pull origin main
 
+##### help revert any file or directory back to its previous state of last commit. 
+###### use to undo local uncommited changes, or removes changes that were added to the staging area using git add
+git restore filename.extension | git restore directory_name
+
+###### undo all changes across the entire repository
+git restore .
+
+###### remove files from the stagging area but keep the working directory unchanged
+git restore --staged filename | git restore --staged .
+
 ### Cloning an Existing Repository
 Bash
 ##### Clone a repository onto your local machine
